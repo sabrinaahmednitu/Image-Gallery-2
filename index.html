@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pinterest image</title>
+    <link rel="stylesheet" href="style.css">
+     <style>
+        h1{
+            text-align: center;
+            color: rgb(255, 0, 140);
+        }
+        .container{
+            display: grid;
+            grid-template-columns: repeat(auto-fit ,minmax(100px,1fr));
+            grid-gap: 3px;
+            grid-auto-flow: dense;
+        }
+        .container img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .horizontal{
+            grid-column: auto / span 2 ;
+        }
+        .vertical{
+           grid-row: auto / span 2;
+        }
+        .big{
+            grid-column: auto / span 2;
+             grid-row: span 2;
+        }
+    </style>
+</head>
+<body>
+     <h1  class="animate__animated animate__flip" id="pin" >Pinterest</h1>
+
+     <div class="full-img" id="fullimgBox" >
+        <img src="images/img1.jpg" id="fullimg">
+        <span onclick="closeFullimg()"  >X</span>
+    </div>
+
+    <div class="container">
+        <div><img src="./img/p1.jpg" onclick="openFullimg(this.src)"></div>
+        <div class="vertical"><img src="./img/p21.jpg" onclick="openFullimg(this.src)"> </div>
+        <div class="horizontal"> <img src="./img/p18.jpg" onclick="openFullimg(this.src)"> </div>
+        <div><img src="./img/p1.jpg" onclick="openFullimg(this.src)"></div>
+        <div><img src="./img/p5.jpg" onclick="openFullimg(this.src)"></div>
+        <div class="big" > <img src="./img/p8.jpg" onclick="openFullimg(this.src)"> </div>
+        <div><img src="./img/p3.jpg" onclick="openFullimg(this.src)"></div>
+        <div class="vertical"><img src="./img/p2.jpg" onclick="openFullimg(this.src)"> </div>
+        <div><img src="./img/p6.jpg" onclick="openFullimg(this.src)"></div>
+        <div class="horizontal"> <img src="./img/p16.jpg" onclick="openFullimg(this.src)"> </div>
+        <div><img src="./img/p21.jpg" onclick="openFullimg(this.src)"></div>
+        <div class="big" > <img src="./img/p14.jpg" onclick="openFullimg(this.src)"> </div>
+        <div><img src="./img/p9.jpg" onclick="openFullimg(this.src)"></div>
+        <div class="horizontal"> <img src="./img/p10.jpg" onclick="openFullimg(this.src)"> </div>
+        <div class="big" > <img src="./img/p7.jpg" onclick="openFullimg(this.src)"> </div>
+        <div class="vertical"><img src="./img/p18.jpg" onclick="openFullimg(this.src)"> </div>
+        <div><img src="./img/p1.jpg" onclick="openFullimg(this.src)"></div>
+        <div class="vertical"><img src="./img/p21.jpg" onclick="openFullimg(this.src)"> </div>
+        <div class="horizontal"> <img src="./img/p18.jpg" onclick="openFullimg(this.src)"> </div>
+        <div><img src="./img/p1.jpg" onclick="openFullimg(this.src)"></div>
+        <div><img src="./img/p5.jpg" onclick="openFullimg(this.src)"></div>
+        <div class="big" > <img src="./img/p8.jpg" onclick="openFullimg(this.src)"> </div>
+        <div><img src="./img/p3.jpg" onclick="openFullimg(this.src)"></div>
+        <div class="vertical"><img src="./img/p2.jpg" onclick="openFullimg(this.src)"> </div>
+        <div><img src="./img/p6.jpg" onclick="openFullimg(this.src)"></div>
+        <div class="horizontal"> <img src="./img/p16.jpg" onclick="openFullimg(this.src)"> </div>
+        <div><img src="./img/p21.jpg" onclick="openFullimg(this.src)"></div>
+        <div class="big" > <img src="./img/p14.jpg" onclick="openFullimg(this.src)"> </div>
+        <div><img src="./img/p9.jpg" onclick="openFullimg(this.src)"></div>
+        <div class="horizontal"> <img src="./img/p10.jpg" onclick="openFullimg(this.src)"> </div>
+        <div><img src="./img/p13.jpg" onclick="openFullimg(this.src)"></div>
+        <div class="big" > <img src="./img/p7.jpg" onclick="openFullimg(this.src)"> </div>
+        <div class="vertical"><img src="./img/p18.jpg" onclick="openFullimg(this.src)"> </div>
+    </div>
+
+
+
+
+
+    <script>
+   var fullimgBox=document.getElementById("fullimgBox")
+   var fullimg=document.getElementById("fullimg")
+
+   function openFullimg(pic){
+       fullimgBox.style.display="flex";
+       fullimg.src=pic
+   }
+
+   function closeFullimg(){
+       fullimgBox.style.display="none";
+   }
+</script>
+</body>
+</html>
